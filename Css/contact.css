@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Banner */
+  .banner {
+    background: #ccc;
+    padding: 2em;
+    text-align: center;
+  }
+  
+  /* Room Sections */
+  .rooms {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2em;
+  }
+  
+  .room {
+    width: 30%;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  
+  .room img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .rooms {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .room {
+      width: 80%;
+    }
+  }
+  /* contact.css - Styles for the Contact Page */
+
+.contact-container {
+    max-width: 600px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #333;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border 0.3s ease;
+  }
+  
+  .contact-container input:focus,
+  .contact-container textarea:focus {
+    border-color: #666;
+    outline: none;
+  }
+  
+  .contact-container button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-container button:hover {
+    background-color: #555;
+  }
+  
+  #formMessage {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  

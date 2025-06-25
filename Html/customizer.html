@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customizer - Online Home Interior</title>
+  <link rel="stylesheet" href="/Css/customizer.css" />
+  <style>
+    .customizer-container {
+      text-align: center;
+      padding: 2em;
+    }
+
+    .room-preview {
+      width: 300px;
+      height: 200px;
+      margin: 1em auto;
+      background-image: url('images/room-base.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 5px solid #333;
+    }
+
+    label, select, input[type=color] {
+      margin: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Online Home Interior</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="customizer.html" class="active">Customizer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Customizer Section -->
+  <section class="banner">
+    <h2>Customize Your Room</h2>
+    <p>Change wall colors and furniture styles</p>
+  </section>
+
+  <section class="customizer-container">
+    <div class="room-preview" id="roomPreview"></div>
+
+    <div>
+      <label for="wallColor">Wall Color:</label>
+      <input type="color" id="wallColor" value="#cccccc" />
+    </div>
+
+    <div>
+      <label for="furniture">Furniture Style:</label>
+      <select id="furniture">
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+        <option value="minimal">Minimalist</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Online Home Interior. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const roomPreview = document.getElementById('roomPreview');
+    const wallColorInput = document.getElementById('wallColor');
+    const furnitureSelect = document.getElementById('furniture');
+
+    wallColorInput.addEventListener('input', () => {
+      roomPreview.style.backgroundColor = wallColorInput.value;
+    });
+
+    furnitureSelect.addEventListener('change', () => {
+      const furniture = furnitureSelect.value;
+      let furnitureImage = 'room-base.jpg';
+
+      if (furniture === 'modern') furnitureImage = 'room-modern.jpg';
+      else if (furniture === 'classic') furnitureImage = 'room-classic.jpg';
+      else if (furniture === 'minimal') furnitureImage = 'room-minimal.jpg';
+
+      roomPreview.style.backgroundImage = `url('images/${furnitureImage}')`;
+    });
+  </script>
+</body>
+</html>
